@@ -78,6 +78,7 @@ input {
 .btn {
   cursor: pointer;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  padding: 0;
 }
 
 .section-title {
@@ -587,13 +588,13 @@ input {
   border-radius: 50%;
   background-color: #e7e9fc;
   border: 1px solid rgba(0, 0, 0, 0.1);
-  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  transition-property: border-color, background-color;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-btn:hover,
 .modal-btn:focus {
-  border-color: #404bbf;
+  border: none;
 }
 
 .modal-btn:hover > .close-icon,
@@ -705,8 +706,9 @@ input[type="checkbox"]:checked + .checkbox-text .modal-checkbox {
   margin-right: 8px;
   cursor: pointer;
   fill: transparent;
-  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  transition-property: border-color, background-color, fill;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .checkbox-icon {
   fill: #fff;
